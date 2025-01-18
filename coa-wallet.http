@@ -1,0 +1,6 @@
+@coa_wallet_HostAddress = http://localhost:5260
+
+GET {{coa_wallet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
