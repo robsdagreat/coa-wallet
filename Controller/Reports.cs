@@ -4,7 +4,7 @@ using coa_Wallet.Models;
 
 namespace coa_Wallet.Controllers
 {
-[ApiController]
+    [ApiController]
     [Route("api/[controller]")]
     public class ReportsController : ControllerBase
     {
@@ -18,6 +18,10 @@ namespace coa_Wallet.Controllers
         [HttpGet("summary")]
         public async Task<IActionResult> GetTransactionsSummary([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
+            // Ensure both startDate and endDate are in UTC format
+            startDate = startDate.Kind == DateTimeKind.Utc ? startDate : startDate.ToUniversalTime();
+            endDate = endDate.Kind == DateTimeKind.Utc ? endDate : endDate.ToUniversalTime();
+
             var transactions = await _context.Transactions
                 .Include(t => t.Category)
                 .Where(t => t.Date >= startDate && t.Date <= endDate)
@@ -37,6 +41,10 @@ namespace coa_Wallet.Controllers
         [HttpGet("by-category")]
         public async Task<IActionResult> GetCategoryReport([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
+            // Ensure both startDate and endDate are in UTC format
+            startDate = startDate.Kind == DateTimeKind.Utc ? startDate : startDate.ToUniversalTime();
+            endDate = endDate.Kind == DateTimeKind.Utc ? endDate : endDate.ToUniversalTime();
+
             var categoryTotals = await _context.Transactions
                 .Include(t => t.Category)
                 .Where(t => t.Date >= startDate && t.Date <= endDate)
