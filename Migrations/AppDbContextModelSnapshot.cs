@@ -38,9 +38,16 @@ namespace coa_wallet.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.HasIndex("UserId");
 
@@ -61,8 +68,14 @@ namespace coa_wallet.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<decimal>("Limit")
                         .HasColumnType("numeric");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("timestamp with time zone");
@@ -83,6 +96,7 @@ namespace coa_wallet.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -119,6 +133,9 @@ namespace coa_wallet.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
                     b.Property<string>("Type")
                         .HasColumnType("text");
 
@@ -129,6 +146,72 @@ namespace coa_wallet.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Transactions");
+                });
+
+            modelBuilder.Entity("coa_Wallet.Models.User", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Role")
+                        .HasColumnType("text");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("coa_Wallet.Models.Account", b =>
+                {
+                    b.HasOne("coa_Wallet.Models.User", "User")
+                        .WithMany("Accounts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("coa_Wallet.Models.User", b =>
@@ -236,14 +319,11 @@ namespace coa_wallet.Migrations
                     b.Navigation("Category");
                 });
 
-<<<<<<< HEAD
             modelBuilder.Entity("coa_Wallet.Models.Category", b =>
                 {
                     b.Navigation("Transactions");
                 });
 
-=======
->>>>>>> main
             modelBuilder.Entity("coa_Wallet.Models.User", b =>
                 {
                     b.Navigation("Accounts");
