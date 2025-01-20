@@ -48,7 +48,7 @@ builder.Services.AddAuthentication(options =>
         ValidAudience = builder.Configuration["Jwt:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? 
-                throw new InvalidOperationException("JWT Key is not configured")))
+                throw new InvalidOperationException("JWT Key is not configured"))),
     };
     
     // Custom events handling
@@ -121,14 +121,13 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Configure middleware
-if (app.Environment.IsDevelopment())
+// Always use Swagger, even in production
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Wallet API V1");
-    });
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Wallet API V1");
+    c.RoutePrefix = string.Empty; // Makes Swagger UI available at root (optional)
+});
 
 app.UseHttpsRedirection();
 
@@ -139,6 +138,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.MapHub<NotificationHub>("/notificationHub");
+
 // Ensure the database is migrated at runtime
 using (var scope = app.Services.CreateScope())
 {
