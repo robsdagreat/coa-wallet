@@ -151,5 +151,8 @@ D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.K
 D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+<<<<<<< HEAD
 D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+=======
+>>>>>>> main
