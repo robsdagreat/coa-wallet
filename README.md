@@ -3,6 +3,9 @@
 COA Wallet is a personal finance management API built with .NET, PostgreSQL, and JWT authentication. This project allows users to manage their financial transactions, categories, and user authentication with a secure API.
 
 ## Features
+- **Deployed Link**: https://coa-wallet.onrender.com/index.html
+
+## Features
 - **User Authentication**: JWT-based authentication for secure user management.
 - **Categories**: Categorize your transactions with a flexible category structure, including parent-child relationships.
 - **Transactions**: Add, edit, and delete transactions while keeping them linked to user accounts and categories.
