@@ -7,7 +7,8 @@ EXPOSE 443
 # Build the app
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["YourProjectName.csproj", "./"]
+
+COPY ["coa-wallet.csproj", "./"]
 
 RUN dotnet restore "coa-wallet.csproj"
 COPY . .
