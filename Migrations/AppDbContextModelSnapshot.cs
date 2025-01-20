@@ -226,7 +226,7 @@ namespace coa_wallet.Migrations
                         .IsRequired();
 
                     b.HasOne("coa_Wallet.Models.Category", "Category")
-                        .WithMany("Transactions")
+                        .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -236,14 +236,6 @@ namespace coa_wallet.Migrations
                     b.Navigation("Category");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("coa_Wallet.Models.Category", b =>
-                {
-                    b.Navigation("Transactions");
-                });
-
-=======
->>>>>>> main
             modelBuilder.Entity("coa_Wallet.Models.User", b =>
                 {
                     b.Navigation("Accounts");

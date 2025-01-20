@@ -152,7 +152,34 @@ D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.Entit
 D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 <<<<<<< HEAD
-D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
 =======
 >>>>>>> main
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Azure.Core.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Azure.Identity.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.ClientModel.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Formats.Asn1.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Memory.Data.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\SpiderBit\COA\coa-wallet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

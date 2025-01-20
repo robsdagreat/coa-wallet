@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("coa-wallet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4bf37c545ff107ab2a4a49cba9ebc132319db8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dae731d90d10c179942c378ee60d5f8886812845")]
 [assembly: System.Reflection.AssemblyProductAttribute("coa-wallet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("coa-wallet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
