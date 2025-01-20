@@ -7,7 +7,9 @@ EXPOSE 443
 # Build the app
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
+
 COPY ["coa-wallet.csproj", "./"]
+
 RUN dotnet restore "coa-wallet.csproj"
 COPY . .
 WORKDIR "/src/"
@@ -17,4 +19,6 @@ RUN dotnet publish "coa-wallet.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
+
 ENTRYPOINT ["dotnet", "coa-wallet.dll"]
+
