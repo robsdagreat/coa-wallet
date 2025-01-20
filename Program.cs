@@ -8,6 +8,8 @@ using Microsoft.OpenApi.Models;
 using coa_Wallet;
 using coa_Wallet.Models;
 using coa_Wallet.Utils;
+using coa_Wallet.Services;
+using coa_Wallet.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -66,6 +68,9 @@ builder.Services.AddAuthentication(options =>
 
 // Configure Swagger
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSignalR();
+builder.Services.AddScoped<NotificationService>();
+builder.Services.AddScoped<ReportingService>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
@@ -133,7 +138,7 @@ app.UseAuthentication(); // Add authentication middleware
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.MapHub<NotificationHub>("/notificationHub");
 // Ensure the database is migrated at runtime
 using (var scope = app.Services.CreateScope())
 {

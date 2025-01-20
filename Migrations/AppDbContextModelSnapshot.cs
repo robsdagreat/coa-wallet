@@ -58,8 +58,14 @@ namespace coa_wallet.Migrations
                     b.Property<int>("AccountId")
                         .HasColumnType("integer");
 
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<decimal>("Limit")
                         .HasColumnType("numeric");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
@@ -109,6 +115,9 @@ namespace coa_wallet.Migrations
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
 
                     b.Property<string>("Type")
                         .HasColumnType("text");
@@ -217,7 +226,7 @@ namespace coa_wallet.Migrations
                         .IsRequired();
 
                     b.HasOne("coa_Wallet.Models.Category", "Category")
-                        .WithMany()
+                        .WithMany("Transactions")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -227,6 +236,14 @@ namespace coa_wallet.Migrations
                     b.Navigation("Category");
                 });
 
+<<<<<<< HEAD
+            modelBuilder.Entity("coa_Wallet.Models.Category", b =>
+                {
+                    b.Navigation("Transactions");
+                });
+
+=======
+>>>>>>> main
             modelBuilder.Entity("coa_Wallet.Models.User", b =>
                 {
                     b.Navigation("Accounts");
