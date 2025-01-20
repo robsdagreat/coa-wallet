@@ -35,5 +35,5 @@ Follow these steps to run the backend locally or in a production environment.
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo/coa-wallet-backend.git
+   git clone https://github.com/robsdagreat/coa-wallet.git
    cd coa-wallet-backend
