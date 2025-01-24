@@ -22,6 +22,12 @@ using coa_Wallet.Models;
                 .WithMany(u => u.Accounts)    // Each user can have many accounts
                 .HasForeignKey(a => a.UserId) // Foreign key in the Account table
                 .OnDelete(DeleteBehavior.Cascade); // If a user is deleted, their accounts will also be deleted
+
+                modelBuilder.Entity<Category>()
+                .HasOne(c => c.Account)
+                .WithMany()
+                .HasForeignKey(c => c.AccountId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
     }
